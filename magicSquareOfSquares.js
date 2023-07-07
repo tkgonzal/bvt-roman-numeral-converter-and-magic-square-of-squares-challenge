@@ -77,9 +77,9 @@ function satisfiesParkerConstraints(a, b, d) {
  * Using the values of a, b, d, does a brute force search to fill in the
  * remaining values of a matrix. If a semi magic square is found, adds it
  * to the list of found semi magic square of squares.
- * @param {*} repeatVals An array of [a, b, d] The repeated values to be
+ * @param {Number[]} repeatVals An array of [a, b, d] The repeated values to be
  * considered of a semi-magic square
- * @param {*} foundSemiMagicSquareOfSquares The array of all found
+ * @param {Number[][][]} foundSemiMagicSquareOfSquares The array of all found
  * semi-magic squares
  */
 function bruteForceSearchSquares([a, b, d], foundSemiMagicSquareOfSquares) {
