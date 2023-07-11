@@ -182,7 +182,7 @@ function isMagicForADiagonal(square, magicNumber) {
  */
 function hasMinimalRepeatingValues(square) {
     const MIN_UNIQUE_VALUES = 6;
-    const MIN_VALUE_REPEAT = 2;
+    const MAX_VALUE_REPEAT = 2;
 
     const countMap = new Map();
 
@@ -199,7 +199,7 @@ function hasMinimalRepeatingValues(square) {
     // The array of the frequency of each value that appears 
     // in the square
     const squareValCounts = Array.from(countMap.values());
-    const lessThanThreshhold = cur => cur <= MIN_VALUE_REPEAT;
+    const lessThanThreshhold = cur => cur <= MAX_VALUE_REPEAT;
 
     return squareValCounts.length >= MIN_UNIQUE_VALUES &&
         squareValCounts.every(lessThanThreshhold);
