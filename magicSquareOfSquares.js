@@ -199,10 +199,10 @@ function hasMinimalRepeatingValues(square) {
     // The array of the frequency of each value that appears 
     // in the square
     const squareValCounts = Array.from(countMap.values());
-    const lessThanThreshhold = cur => cur <= MAX_VALUE_REPEAT;
+    const isLessThanThreshhold = cur => cur <= MAX_VALUE_REPEAT;
 
     return squareValCounts.length >= MIN_UNIQUE_VALUES &&
-        squareValCounts.every(lessThanThreshhold);
+        squareValCounts.every(isLessThanThreshhold);
 }
 
 /**
